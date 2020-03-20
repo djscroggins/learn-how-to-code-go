@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+	fmt.Printf("x before append: %v\n", x)
+	x = append(x, 52)
+	fmt.Printf("x after append: %v\n", x)
+	x = append(x, 53, 54, 55)
+	fmt.Printf("x after 2nd append: %v\n", x)
+	y := []int{56, 57, 58, 59, 60}
+	x = append(x, y...)
+	fmt.Printf("x after appending y: %v\n", x)
+
+}
